@@ -1,0 +1,7 @@
+# RAMALOKA dependencies
+streamlit>=1.30.0
+pandas>=2.0.0
+numpy>=1.26.0
+
+# Dev dependencies (install separately with: pip install -r requirements-dev.txt)
+# pytest

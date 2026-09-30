@@ -1,0 +1,2 @@
+# Development dependencies for RAMALOKA
+pytest>=8.0.0

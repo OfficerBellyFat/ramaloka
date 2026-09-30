@@ -1,0 +1,623 @@
+{
+  "reference_date": "2026-09-30",
+  "sales_warnings": [],
+  "forecast": [
+    {
+      "product": "Ayam Geprek",
+      "date": "2026-10-01T00:00:00.000",
+      "forecast_qty": 22.29,
+      "confidence": 1.0,
+      "label": "High"
+    },
+    {
+      "product": "Ayam Geprek",
+      "date": "2026-10-02T00:00:00.000",
+      "forecast_qty": 22.29,
+      "confidence": 1.0,
+      "label": "High"
+    },
+    {
+      "product": "Ayam Geprek",
+      "date": "2026-10-03T00:00:00.000",
+      "forecast_qty": 22.29,
+      "confidence": 1.0,
+      "label": "High"
+    },
+    {
+      "product": "Ayam Geprek",
+      "date": "2026-10-04T00:00:00.000",
+      "forecast_qty": 22.29,
+      "confidence": 1.0,
+      "label": "High"
+    },
+    {
+      "product": "Ayam Geprek",
+      "date": "2026-10-05T00:00:00.000",
+      "forecast_qty": 22.29,
+      "confidence": 1.0,
+      "label": "High"
+    },
+    {
+      "product": "Ayam Geprek",
+      "date": "2026-10-06T00:00:00.000",
+      "forecast_qty": 22.29,
+      "confidence": 1.0,
+      "label": "High"
+    },
+    {
+      "product": "Ayam Geprek",
+      "date": "2026-10-07T00:00:00.000",
+      "forecast_qty": 22.29,
+      "confidence": 1.0,
+      "label": "High"
+    },
+    {
+      "product": "Bakso Cup",
+      "date": "2026-10-01T00:00:00.000",
+      "forecast_qty": 7.43,
+      "confidence": 0.88,
+      "label": "High"
+    },
+    {
+      "product": "Bakso Cup",
+      "date": "2026-10-02T00:00:00.000",
+      "forecast_qty": 7.43,
+      "confidence": 0.88,
+      "label": "High"
+    },
+    {
+      "product": "Bakso Cup",
+      "date": "2026-10-03T00:00:00.000",
+      "forecast_qty": 7.43,
+      "confidence": 0.88,
+      "label": "High"
+    },
+    {
+      "product": "Bakso Cup",
+      "date": "2026-10-04T00:00:00.000",
+      "forecast_qty": 7.43,
+      "confidence": 0.88,
+      "label": "High"
+    },
+    {
+      "product": "Bakso Cup",
+      "date": "2026-10-05T00:00:00.000",
+      "forecast_qty": 7.43,
+      "confidence": 0.88,
+      "label": "High"
+    },
+    {
+      "product": "Bakso Cup",
+      "date": "2026-10-06T00:00:00.000",
+      "forecast_qty": 7.43,
+      "confidence": 0.88,
+      "label": "High"
+    },
+    {
+      "product": "Bakso Cup",
+      "date": "2026-10-07T00:00:00.000",
+      "forecast_qty": 7.43,
+      "confidence": 0.88,
+      "label": "High"
+    },
+    {
+      "product": "Donat Kentang",
+      "date": "2026-10-01T00:00:00.000",
+      "forecast_qty": 0.0,
+      "confidence": 0.72,
+      "label": "High"
+    },
+    {
+      "product": "Donat Kentang",
+      "date": "2026-10-02T00:00:00.000",
+      "forecast_qty": 0.0,
+      "confidence": 0.72,
+      "label": "High"
+    },
+    {
+      "product": "Donat Kentang",
+      "date": "2026-10-03T00:00:00.000",
+      "forecast_qty": 0.0,
+      "confidence": 0.72,
+      "label": "High"
+    },
+    {
+      "product": "Donat Kentang",
+      "date": "2026-10-04T00:00:00.000",
+      "forecast_qty": 0.0,
+      "confidence": 0.72,
+      "label": "High"
+    },
+    {
+      "product": "Donat Kentang",
+      "date": "2026-10-05T00:00:00.000",
+      "forecast_qty": 0.0,
+      "confidence": 0.72,
+      "label": "High"
+    },
+    {
+      "product": "Donat Kentang",
+      "date": "2026-10-06T00:00:00.000",
+      "forecast_qty": 0.0,
+      "confidence": 0.72,
+      "label": "High"
+    },
+    {
+      "product": "Donat Kentang",
+      "date": "2026-10-07T00:00:00.000",
+      "forecast_qty": 0.0,
+      "confidence": 0.72,
+      "label": "High"
+    },
+    {
+      "product": "Es Teh Manis",
+      "date": "2026-10-01T00:00:00.000",
+      "forecast_qty": 41.14,
+      "confidence": 1.0,
+      "label": "High"
+    },
+    {
+      "product": "Es Teh Manis",
+      "date": "2026-10-02T00:00:00.000",
+      "forecast_qty": 41.14,
+      "confidence": 1.0,
+      "label": "High"
+    },
+    {
+      "product": "Es Teh Manis",
+      "date": "2026-10-03T00:00:00.000",
+      "forecast_qty": 41.14,
+      "confidence": 1.0,
+      "label": "High"
+    },
+    {
+      "product": "Es Teh Manis",
+      "date": "2026-10-04T00:00:00.000",
+      "forecast_qty": 41.14,
+      "confidence": 1.0,
+      "label": "High"
+    },
+    {
+      "product": "Es Teh Manis",
+      "date": "2026-10-05T00:00:00.000",
+      "forecast_qty": 41.14,
+      "confidence": 1.0,
+      "label": "High"
+    },
+    {
+      "product": "Es Teh Manis",
+      "date": "2026-10-06T00:00:00.000",
+      "forecast_qty": 41.14,
+      "confidence": 1.0,
+      "label": "High"
+    },
+    {
+      "product": "Es Teh Manis",
+      "date": "2026-10-07T00:00:00.000",
+      "forecast_qty": 41.14,
+      "confidence": 1.0,
+      "label": "High"
+    },
+    {
+      "product": "Kopi Susu",
+      "date": "2026-10-01T00:00:00.000",
+      "forecast_qty": 30.0,
+      "confidence": 0.88,
+      "label": "High"
+    },
+    {
+      "product": "Kopi Susu",
+      "date": "2026-10-02T00:00:00.000",
+      "forecast_qty": 30.0,
+      "confidence": 0.88,
+      "label": "High"
+    },
+    {
+      "product": "Kopi Susu",
+      "date": "2026-10-03T00:00:00.000",
+      "forecast_qty": 30.0,
+      "confidence": 0.88,
+      "label": "High"
+    },
+    {
+      "product": "Kopi Susu",
+      "date": "2026-10-04T00:00:00.000",
+      "forecast_qty": 30.0,
+      "confidence": 0.88,
+      "label": "High"
+    },
+    {
+      "product": "Kopi Susu",
+      "date": "2026-10-05T00:00:00.000",
+      "forecast_qty": 30.0,
+      "confidence": 0.88,
+      "label": "High"
+    },
+    {
+      "product": "Kopi Susu",
+      "date": "2026-10-06T00:00:00.000",
+      "forecast_qty": 30.0,
+      "confidence": 0.88,
+      "label": "High"
+    },
+    {
+      "product": "Kopi Susu",
+      "date": "2026-10-07T00:00:00.000",
+      "forecast_qty": 30.0,
+      "confidence": 0.88,
+      "label": "High"
+    },
+    {
+      "product": "Mie Goreng",
+      "date": "2026-10-01T00:00:00.000",
+      "forecast_qty": 13.43,
+      "confidence": 0.88,
+      "label": "High"
+    },
+    {
+      "product": "Mie Goreng",
+      "date": "2026-10-02T00:00:00.000",
+      "forecast_qty": 13.43,
+      "confidence": 0.88,
+      "label": "High"
+    },
+    {
+      "product": "Mie Goreng",
+      "date": "2026-10-03T00:00:00.000",
+      "forecast_qty": 13.43,
+      "confidence": 0.88,
+      "label": "High"
+    },
+    {
+      "product": "Mie Goreng",
+      "date": "2026-10-04T00:00:00.000",
+      "forecast_qty": 13.43,
+      "confidence": 0.88,
+      "label": "High"
+    },
+    {
+      "product": "Mie Goreng",
+      "date": "2026-10-05T00:00:00.000",
+      "forecast_qty": 13.43,
+      "confidence": 0.88,
+      "label": "High"
+    },
+    {
+      "product": "Mie Goreng",
+      "date": "2026-10-06T00:00:00.000",
+      "forecast_qty": 13.43,
+      "confidence": 0.88,
+      "label": "High"
+    },
+    {
+      "product": "Mie Goreng",
+      "date": "2026-10-07T00:00:00.000",
+      "forecast_qty": 13.43,
+      "confidence": 0.88,
+      "label": "High"
+    },
+    {
+      "product": "Nasi Goreng",
+      "date": "2026-10-01T00:00:00.000",
+      "forecast_qty": 34.14,
+      "confidence": 0.88,
+      "label": "High"
+    },
+    {
+      "product": "Nasi Goreng",
+      "date": "2026-10-02T00:00:00.000",
+      "forecast_qty": 34.14,
+      "confidence": 0.88,
+      "label": "High"
+    },
+    {
+      "product": "Nasi Goreng",
+      "date": "2026-10-03T00:00:00.000",
+      "forecast_qty": 34.14,
+      "confidence": 0.88,
+      "label": "High"
+    },
+    {
+      "product": "Nasi Goreng",
+      "date": "2026-10-04T00:00:00.000",
+      "forecast_qty": 34.14,
+      "confidence": 0.88,
+      "label": "High"
+    },
+    {
+      "product": "Nasi Goreng",
+      "date": "2026-10-05T00:00:00.000",
+      "forecast_qty": 34.14,
+      "confidence": 0.88,
+      "label": "High"
+    },
+    {
+      "product": "Nasi Goreng",
+      "date": "2026-10-06T00:00:00.000",
+      "forecast_qty": 34.14,
+      "confidence": 0.88,
+      "label": "High"
+    },
+    {
+      "product": "Nasi Goreng",
+      "date": "2026-10-07T00:00:00.000",
+      "forecast_qty": 34.14,
+      "confidence": 0.88,
+      "label": "High"
+    },
+    {
+      "product": "Pisang Goreng",
+      "date": "2026-10-01T00:00:00.000",
+      "forecast_qty": 2.57,
+      "confidence": 0.76,
+      "label": "High"
+    },
+    {
+      "product": "Pisang Goreng",
+      "date": "2026-10-02T00:00:00.000",
+      "forecast_qty": 2.57,
+      "confidence": 0.76,
+      "label": "High"
+    },
+    {
+      "product": "Pisang Goreng",
+      "date": "2026-10-03T00:00:00.000",
+      "forecast_qty": 2.57,
+      "confidence": 0.76,
+      "label": "High"
+    },
+    {
+      "product": "Pisang Goreng",
+      "date": "2026-10-04T00:00:00.000",
+      "forecast_qty": 2.57,
+      "confidence": 0.76,
+      "label": "High"
+    },
+    {
+      "product": "Pisang Goreng",
+      "date": "2026-10-05T00:00:00.000",
+      "forecast_qty": 2.57,
+      "confidence": 0.76,
+      "label": "High"
+    },
+    {
+      "product": "Pisang Goreng",
+      "date": "2026-10-06T00:00:00.000",
+      "forecast_qty": 2.57,
+      "confidence": 0.76,
+      "label": "High"
+    },
+    {
+      "product": "Pisang Goreng",
+      "date": "2026-10-07T00:00:00.000",
+      "forecast_qty": 2.57,
+      "confidence": 0.76,
+      "label": "High"
+    },
+    {
+      "product": "Roti Bakar",
+      "date": "2026-10-01T00:00:00.000",
+      "forecast_qty": 13.14,
+      "confidence": 0.88,
+      "label": "High"
+    },
+    {
+      "product": "Roti Bakar",
+      "date": "2026-10-02T00:00:00.000",
+      "forecast_qty": 13.14,
+      "confidence": 0.88,
+      "label": "High"
+    },
+    {
+      "product": "Roti Bakar",
+      "date": "2026-10-03T00:00:00.000",
+      "forecast_qty": 13.14,
+      "confidence": 0.88,
+      "label": "High"
+    },
+    {
+      "product": "Roti Bakar",
+      "date": "2026-10-04T00:00:00.000",
+      "forecast_qty": 13.14,
+      "confidence": 0.88,
+      "label": "High"
+    },
+    {
+      "product": "Roti Bakar",
+      "date": "2026-10-05T00:00:00.000",
+      "forecast_qty": 13.14,
+      "confidence": 0.88,
+      "label": "High"
+    },
+    {
+      "product": "Roti Bakar",
+      "date": "2026-10-06T00:00:00.000",
+      "forecast_qty": 13.14,
+      "confidence": 0.88,
+      "label": "High"
+    },
+    {
+      "product": "Roti Bakar",
+      "date": "2026-10-07T00:00:00.000",
+      "forecast_qty": 13.14,
+      "confidence": 0.88,
+      "label": "High"
+    },
+    {
+      "product": "Sate Taichan",
+      "date": "2026-10-01T00:00:00.000",
+      "forecast_qty": 10.86,
+      "confidence": 0.76,
+      "label": "High"
+    },
+    {
+      "product": "Sate Taichan",
+      "date": "2026-10-02T00:00:00.000",
+      "forecast_qty": 10.86,
+      "confidence": 0.76,
+      "label": "High"
+    },
+    {
+      "product": "Sate Taichan",
+      "date": "2026-10-03T00:00:00.000",
+      "forecast_qty": 10.86,
+      "confidence": 0.76,
+      "label": "High"
+    },
+    {
+      "product": "Sate Taichan",
+      "date": "2026-10-04T00:00:00.000",
+      "forecast_qty": 10.86,
+      "confidence": 0.76,
+      "label": "High"
+    },
+    {
+      "product": "Sate Taichan",
+      "date": "2026-10-05T00:00:00.000",
+      "forecast_qty": 10.86,
+      "confidence": 0.76,
+      "label": "High"
+    },
+    {
+      "product": "Sate Taichan",
+      "date": "2026-10-06T00:00:00.000",
+      "forecast_qty": 10.86,
+      "confidence": 0.76,
+      "label": "High"
+    },
+    {
+      "product": "Sate Taichan",
+      "date": "2026-10-07T00:00:00.000",
+      "forecast_qty": 10.86,
+      "confidence": 0.76,
+      "label": "High"
+    }
+  ],
+  "warnings": [
+    {
+      "product": "Sate Taichan",
+      "stock_qty": 20,
+      "expiry_date": "2026-09-28T00:00:00.000",
+      "days_until_expiry": -2,
+      "avg_daily_demand": 10.86,
+      "days_to_sell": 1.84,
+      "risk": "High",
+      "suggested_action": "Produk sudah kedaluwarsa. Pertimbangkan buang atau donasikan.",
+      "potential_units_wasted": 41.72,
+      "forecast_confidence": 0.76
+    },
+    {
+      "product": "Donat Kentang",
+      "stock_qty": 50,
+      "expiry_date": "2026-10-14T00:00:00.000",
+      "days_until_expiry": 14,
+      "avg_daily_demand": 0.0,
+      "days_to_sell": "∞",
+      "risk": "High",
+      "suggested_action": "Tidak ada riwayat penjualan. Periksa secara manual sebelum memesan ulang.",
+      "potential_units_wasted": 50.0,
+      "forecast_confidence": 0.72
+    },
+    {
+      "product": "Ayam Geprek",
+      "stock_qty": 160,
+      "expiry_date": "2026-10-10T00:00:00.000",
+      "days_until_expiry": 10,
+      "avg_daily_demand": 22.29,
+      "days_to_sell": 7.18,
+      "risk": "Medium",
+      "suggested_action": "Stok mulai menumpuk. Kurangi pembelian berikutnya dan pantau penjualan.",
+      "potential_units_wasted": 0.0,
+      "forecast_confidence": 1.0
+    },
+    {
+      "product": "Es Teh Manis",
+      "stock_qty": 350,
+      "expiry_date": "2026-10-12T00:00:00.000",
+      "days_until_expiry": 12,
+      "avg_daily_demand": 41.14,
+      "days_to_sell": 8.51,
+      "risk": "Medium",
+      "suggested_action": "Stok mulai menumpuk. Kurangi pembelian berikutnya dan pantau penjualan.",
+      "potential_units_wasted": 0.0,
+      "forecast_confidence": 1.0
+    },
+    {
+      "product": "Roti Bakar",
+      "stock_qty": 50,
+      "expiry_date": "2026-10-10T00:00:00.000",
+      "days_until_expiry": 10,
+      "avg_daily_demand": 13.14,
+      "days_to_sell": 3.81,
+      "risk": "Low",
+      "suggested_action": "Stok aman.",
+      "potential_units_wasted": 0.0,
+      "forecast_confidence": 0.88
+    },
+    {
+      "product": "Bakso Cup",
+      "stock_qty": 25,
+      "expiry_date": "2026-10-10T00:00:00.000",
+      "days_until_expiry": 10,
+      "avg_daily_demand": 7.43,
+      "days_to_sell": 3.36,
+      "risk": "Low",
+      "suggested_action": "Stok aman.",
+      "potential_units_wasted": 0.0,
+      "forecast_confidence": 0.88
+    },
+    {
+      "product": "Nasi Goreng",
+      "stock_qty": 30,
+      "expiry_date": "2026-10-14T00:00:00.000",
+      "days_until_expiry": 14,
+      "avg_daily_demand": 34.14,
+      "days_to_sell": 0.88,
+      "risk": "Low",
+      "suggested_action": "Stok aman.",
+      "potential_units_wasted": 0.0,
+      "forecast_confidence": 0.88
+    },
+    {
+      "product": "Kopi Susu",
+      "stock_qty": 40,
+      "expiry_date": "2026-10-14T00:00:00.000",
+      "days_until_expiry": 14,
+      "avg_daily_demand": 30.0,
+      "days_to_sell": 1.33,
+      "risk": "Low",
+      "suggested_action": "Stok aman.",
+      "potential_units_wasted": 0.0,
+      "forecast_confidence": 0.88
+    },
+    {
+      "product": "Pisang Goreng",
+      "stock_qty": 10,
+      "expiry_date": "2026-10-14T00:00:00.000",
+      "days_until_expiry": 14,
+      "avg_daily_demand": 2.57,
+      "days_to_sell": 3.89,
+      "risk": "Low",
+      "suggested_action": "Stok aman.",
+      "potential_units_wasted": 0.0,
+      "forecast_confidence": 0.76
+    },
+    {
+      "product": "Mie Goreng",
+      "stock_qty": 25,
+      "expiry_date": "2026-10-14T00:00:00.000",
+      "days_until_expiry": 14,
+      "avg_daily_demand": 13.43,
+      "days_to_sell": 1.86,
+      "risk": "Low",
+      "suggested_action": "Stok aman.",
+      "potential_units_wasted": 0.0,
+      "forecast_confidence": 0.88
+    }
+  ],
+  "risk_distribution": {
+    "High": 2,
+    "Medium": 2,
+    "Low": 6
+  }
+}

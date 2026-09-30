@@ -1,0 +1,546 @@
+date,product,qty_sold
+2026-08-02,Nasi Goreng,43
+2026-08-03,Nasi Goreng,23
+2026-08-04,Nasi Goreng,28
+2026-08-05,Nasi Goreng,26
+2026-08-06,Nasi Goreng,28
+2026-08-07,Nasi Goreng,17
+2026-08-08,Nasi Goreng,40
+2026-08-09,Nasi Goreng,30
+2026-08-10,Nasi Goreng,27
+2026-08-11,Nasi Goreng,35
+2026-08-12,Nasi Goreng,23
+2026-08-13,Nasi Goreng,27
+2026-08-14,Nasi Goreng,19
+2026-08-15,Nasi Goreng,33
+2026-08-16,Nasi Goreng,37
+2026-08-17,Nasi Goreng,19
+2026-08-18,Nasi Goreng,24
+2026-08-19,Nasi Goreng,26
+2026-08-20,Nasi Goreng,15
+2026-08-21,Nasi Goreng,23
+2026-08-22,Nasi Goreng,40
+2026-08-23,Nasi Goreng,28
+2026-08-24,Nasi Goreng,15
+2026-08-25,Nasi Goreng,22
+2026-08-26,Nasi Goreng,20
+2026-08-27,Nasi Goreng,28
+2026-08-28,Nasi Goreng,28
+2026-08-29,Nasi Goreng,27
+2026-08-30,Nasi Goreng,30
+2026-08-31,Nasi Goreng,27
+2026-09-01,Nasi Goreng,15
+2026-09-02,Nasi Goreng,13
+2026-09-03,Nasi Goreng,31
+2026-09-04,Nasi Goreng,27
+2026-09-05,Nasi Goreng,30
+2026-09-06,Nasi Goreng,30
+2026-09-07,Nasi Goreng,20
+2026-09-08,Nasi Goreng,28
+2026-09-09,Nasi Goreng,22
+2026-09-10,Nasi Goreng,29
+2026-09-11,Nasi Goreng,27
+2026-09-12,Nasi Goreng,31
+2026-09-13,Nasi Goreng,39
+2026-09-14,Nasi Goreng,28
+2026-09-15,Nasi Goreng,26
+2026-09-16,Nasi Goreng,27
+2026-09-17,Nasi Goreng,19
+2026-09-18,Nasi Goreng,28
+2026-09-19,Nasi Goreng,25
+2026-09-20,Nasi Goreng,44
+2026-09-21,Nasi Goreng,29
+2026-09-22,Nasi Goreng,22
+2026-09-23,Nasi Goreng,33
+2026-09-24,Nasi Goreng,21
+2026-09-25,Nasi Goreng,33
+2026-09-26,Nasi Goreng,44
+2026-09-27,Nasi Goreng,50
+2026-09-28,Nasi Goreng,33
+2026-09-29,Nasi Goreng,17
+2026-09-30,Nasi Goreng,41
+2026-08-02,Ayam Geprek,27
+2026-08-03,Ayam Geprek,22
+2026-08-04,Ayam Geprek,13
+2026-08-05,Ayam Geprek,18
+2026-08-06,Ayam Geprek,15
+2026-08-07,Ayam Geprek,9
+2026-08-08,Ayam Geprek,23
+2026-08-09,Ayam Geprek,27
+2026-08-10,Ayam Geprek,19
+2026-08-11,Ayam Geprek,20
+2026-08-12,Ayam Geprek,20
+2026-08-13,Ayam Geprek,11
+2026-08-14,Ayam Geprek,22
+2026-08-15,Ayam Geprek,20
+2026-08-16,Ayam Geprek,37
+2026-08-17,Ayam Geprek,18
+2026-08-18,Ayam Geprek,11
+2026-08-19,Ayam Geprek,10
+2026-08-20,Ayam Geprek,14
+2026-08-21,Ayam Geprek,11
+2026-08-22,Ayam Geprek,19
+2026-08-23,Ayam Geprek,27
+2026-08-24,Ayam Geprek,16
+2026-08-25,Ayam Geprek,15
+2026-08-26,Ayam Geprek,16
+2026-08-27,Ayam Geprek,21
+2026-08-28,Ayam Geprek,19
+2026-08-29,Ayam Geprek,29
+2026-08-30,Ayam Geprek,23
+2026-08-31,Ayam Geprek,10
+2026-09-01,Ayam Geprek,12
+2026-09-02,Ayam Geprek,15
+2026-09-03,Ayam Geprek,23
+2026-09-04,Ayam Geprek,28
+2026-09-05,Ayam Geprek,25
+2026-09-06,Ayam Geprek,28
+2026-09-07,Ayam Geprek,11
+2026-09-08,Ayam Geprek,20
+2026-09-09,Ayam Geprek,23
+2026-09-10,Ayam Geprek,23
+2026-09-11,Ayam Geprek,13
+2026-09-12,Ayam Geprek,29
+2026-09-13,Ayam Geprek,25
+2026-09-14,Ayam Geprek,16
+2026-09-15,Ayam Geprek,15
+2026-09-16,Ayam Geprek,18
+2026-09-17,Ayam Geprek,20
+2026-09-18,Ayam Geprek,19
+2026-09-19,Ayam Geprek,22
+2026-09-20,Ayam Geprek,32
+2026-09-21,Ayam Geprek,18
+2026-09-22,Ayam Geprek,22
+2026-09-23,Ayam Geprek,33
+2026-09-24,Ayam Geprek,24
+2026-09-25,Ayam Geprek,23
+2026-09-26,Ayam Geprek,23
+2026-09-27,Ayam Geprek,24
+2026-09-28,Ayam Geprek,15
+2026-09-29,Ayam Geprek,25
+2026-09-30,Ayam Geprek,22
+2026-08-02,Roti Bakar,22
+2026-08-03,Roti Bakar,9
+2026-08-04,Roti Bakar,4
+2026-08-05,Roti Bakar,10
+2026-08-06,Roti Bakar,17
+2026-08-07,Roti Bakar,19
+2026-08-08,Roti Bakar,20
+2026-08-09,Roti Bakar,15
+2026-08-10,Roti Bakar,11
+2026-08-11,Roti Bakar,14
+2026-08-12,Roti Bakar,11
+2026-08-13,Roti Bakar,12
+2026-08-14,Roti Bakar,10
+2026-08-15,Roti Bakar,22
+2026-08-16,Roti Bakar,17
+2026-08-17,Roti Bakar,8
+2026-08-18,Roti Bakar,12
+2026-08-19,Roti Bakar,7
+2026-08-20,Roti Bakar,13
+2026-08-21,Roti Bakar,7
+2026-08-22,Roti Bakar,15
+2026-08-23,Roti Bakar,15
+2026-08-24,Roti Bakar,12
+2026-08-25,Roti Bakar,13
+2026-08-26,Roti Bakar,12
+2026-08-27,Roti Bakar,12
+2026-08-28,Roti Bakar,10
+2026-08-29,Roti Bakar,16
+2026-08-30,Roti Bakar,22
+2026-08-31,Roti Bakar,11
+2026-09-01,Roti Bakar,11
+2026-09-02,Roti Bakar,17
+2026-09-03,Roti Bakar,7
+2026-09-04,Roti Bakar,15
+2026-09-05,Roti Bakar,21
+2026-09-06,Roti Bakar,16
+2026-09-07,Roti Bakar,15
+2026-09-08,Roti Bakar,7
+2026-09-09,Roti Bakar,10
+2026-09-10,Roti Bakar,5
+2026-09-11,Roti Bakar,7
+2026-09-12,Roti Bakar,8
+2026-09-13,Roti Bakar,19
+2026-09-14,Roti Bakar,13
+2026-09-15,Roti Bakar,12
+2026-09-16,Roti Bakar,15
+2026-09-17,Roti Bakar,10
+2026-09-18,Roti Bakar,14
+2026-09-19,Roti Bakar,17
+2026-09-20,Roti Bakar,14
+2026-09-21,Roti Bakar,8
+2026-09-22,Roti Bakar,11
+2026-09-23,Roti Bakar,12
+2026-09-24,Roti Bakar,14
+2026-09-25,Roti Bakar,4
+2026-09-26,Roti Bakar,23
+2026-09-27,Roti Bakar,19
+2026-09-28,Roti Bakar,6
+2026-09-29,Roti Bakar,13
+2026-09-30,Roti Bakar,13
+2026-08-02,Kopi Susu,32
+2026-08-03,Kopi Susu,19
+2026-08-04,Kopi Susu,30
+2026-08-05,Kopi Susu,35
+2026-08-06,Kopi Susu,23
+2026-08-07,Kopi Susu,30
+2026-08-08,Kopi Susu,39
+2026-08-09,Kopi Susu,56
+2026-08-10,Kopi Susu,25
+2026-08-11,Kopi Susu,20
+2026-08-12,Kopi Susu,14
+2026-08-13,Kopi Susu,25
+2026-08-14,Kopi Susu,33
+2026-08-15,Kopi Susu,45
+2026-08-16,Kopi Susu,37
+2026-08-17,Kopi Susu,30
+2026-08-18,Kopi Susu,30
+2026-08-19,Kopi Susu,27
+2026-08-20,Kopi Susu,33
+2026-08-21,Kopi Susu,26
+2026-08-22,Kopi Susu,45
+2026-08-23,Kopi Susu,36
+2026-08-24,Kopi Susu,34
+2026-08-25,Kopi Susu,30
+2026-08-26,Kopi Susu,38
+2026-08-27,Kopi Susu,20
+2026-08-28,Kopi Susu,34
+2026-08-29,Kopi Susu,46
+2026-08-30,Kopi Susu,26
+2026-08-31,Kopi Susu,28
+2026-09-01,Kopi Susu,26
+2026-09-02,Kopi Susu,35
+2026-09-03,Kopi Susu,27
+2026-09-04,Kopi Susu,33
+2026-09-05,Kopi Susu,40
+2026-09-06,Kopi Susu,24
+2026-09-07,Kopi Susu,34
+2026-09-08,Kopi Susu,34
+2026-09-09,Kopi Susu,36
+2026-09-10,Kopi Susu,3
+2026-09-11,Kopi Susu,20
+2026-09-12,Kopi Susu,48
+2026-09-13,Kopi Susu,35
+2026-09-14,Kopi Susu,35
+2026-09-15,Kopi Susu,37
+2026-09-16,Kopi Susu,31
+2026-09-17,Kopi Susu,40
+2026-09-18,Kopi Susu,31
+2026-09-19,Kopi Susu,49
+2026-09-20,Kopi Susu,40
+2026-09-21,Kopi Susu,18
+2026-09-22,Kopi Susu,18
+2026-09-23,Kopi Susu,23
+2026-09-24,Kopi Susu,30
+2026-09-25,Kopi Susu,20
+2026-09-26,Kopi Susu,38
+2026-09-27,Kopi Susu,43
+2026-09-28,Kopi Susu,21
+2026-09-29,Kopi Susu,33
+2026-09-30,Kopi Susu,25
+2026-08-02,Es Teh Manis,35
+2026-08-03,Es Teh Manis,38
+2026-08-04,Es Teh Manis,23
+2026-08-05,Es Teh Manis,32
+2026-08-06,Es Teh Manis,22
+2026-08-07,Es Teh Manis,34
+2026-08-08,Es Teh Manis,43
+2026-08-09,Es Teh Manis,52
+2026-08-10,Es Teh Manis,35
+2026-08-11,Es Teh Manis,32
+2026-08-12,Es Teh Manis,49
+2026-08-13,Es Teh Manis,41
+2026-08-14,Es Teh Manis,50
+2026-08-15,Es Teh Manis,36
+2026-08-16,Es Teh Manis,19
+2026-08-17,Es Teh Manis,41
+2026-08-18,Es Teh Manis,23
+2026-08-19,Es Teh Manis,34
+2026-08-20,Es Teh Manis,24
+2026-08-21,Es Teh Manis,27
+2026-08-22,Es Teh Manis,33
+2026-08-23,Es Teh Manis,54
+2026-08-24,Es Teh Manis,17
+2026-08-25,Es Teh Manis,39
+2026-08-26,Es Teh Manis,26
+2026-08-27,Es Teh Manis,37
+2026-08-28,Es Teh Manis,33
+2026-08-29,Es Teh Manis,53
+2026-08-30,Es Teh Manis,49
+2026-08-31,Es Teh Manis,20
+2026-09-01,Es Teh Manis,31
+2026-09-02,Es Teh Manis,36
+2026-09-03,Es Teh Manis,45
+2026-09-04,Es Teh Manis,28
+2026-09-05,Es Teh Manis,54
+2026-09-06,Es Teh Manis,37
+2026-09-07,Es Teh Manis,29
+2026-09-08,Es Teh Manis,36
+2026-09-09,Es Teh Manis,35
+2026-09-10,Es Teh Manis,47
+2026-09-11,Es Teh Manis,32
+2026-09-12,Es Teh Manis,35
+2026-09-13,Es Teh Manis,42
+2026-09-14,Es Teh Manis,40
+2026-09-15,Es Teh Manis,41
+2026-09-16,Es Teh Manis,33
+2026-09-17,Es Teh Manis,23
+2026-09-18,Es Teh Manis,29
+2026-09-19,Es Teh Manis,42
+2026-09-20,Es Teh Manis,29
+2026-09-21,Es Teh Manis,25
+2026-09-22,Es Teh Manis,30
+2026-09-23,Es Teh Manis,47
+2026-09-24,Es Teh Manis,39
+2026-09-25,Es Teh Manis,54
+2026-09-26,Es Teh Manis,41
+2026-09-27,Es Teh Manis,43
+2026-09-28,Es Teh Manis,35
+2026-09-29,Es Teh Manis,35
+2026-09-30,Es Teh Manis,41
+2026-08-02,Mie Goreng,10
+2026-08-03,Mie Goreng,12
+2026-08-04,Mie Goreng,13
+2026-08-05,Mie Goreng,6
+2026-08-06,Mie Goreng,24
+2026-08-07,Mie Goreng,18
+2026-08-08,Mie Goreng,19
+2026-08-09,Mie Goreng,20
+2026-08-10,Mie Goreng,15
+2026-08-11,Mie Goreng,14
+2026-08-12,Mie Goreng,14
+2026-08-13,Mie Goreng,18
+2026-08-14,Mie Goreng,18
+2026-08-15,Mie Goreng,21
+2026-08-16,Mie Goreng,25
+2026-08-17,Mie Goreng,8
+2026-08-18,Mie Goreng,7
+2026-08-19,Mie Goreng,13
+2026-08-20,Mie Goreng,29
+2026-08-21,Mie Goreng,19
+2026-08-22,Mie Goreng,17
+2026-08-23,Mie Goreng,13
+2026-08-24,Mie Goreng,15
+2026-08-25,Mie Goreng,16
+2026-08-26,Mie Goreng,15
+2026-08-27,Mie Goreng,18
+2026-08-28,Mie Goreng,17
+2026-08-29,Mie Goreng,23
+2026-08-30,Mie Goreng,14
+2026-08-31,Mie Goreng,8
+2026-09-01,Mie Goreng,13
+2026-09-02,Mie Goreng,16
+2026-09-03,Mie Goreng,17
+2026-09-04,Mie Goreng,11
+2026-09-05,Mie Goreng,15
+2026-09-06,Mie Goreng,16
+2026-09-07,Mie Goreng,11
+2026-09-08,Mie Goreng,9
+2026-09-09,Mie Goreng,11
+2026-09-10,Mie Goreng,17
+2026-09-11,Mie Goreng,17
+2026-09-12,Mie Goreng,17
+2026-09-13,Mie Goreng,27
+2026-09-14,Mie Goreng,16
+2026-09-15,Mie Goreng,15
+2026-09-16,Mie Goreng,10
+2026-09-17,Mie Goreng,16
+2026-09-18,Mie Goreng,16
+2026-09-19,Mie Goreng,21
+2026-09-20,Mie Goreng,20
+2026-09-21,Mie Goreng,14
+2026-09-22,Mie Goreng,11
+2026-09-23,Mie Goreng,14
+2026-09-24,Mie Goreng,7
+2026-09-25,Mie Goreng,9
+2026-09-26,Mie Goreng,14
+2026-09-27,Mie Goreng,20
+2026-09-28,Mie Goreng,18
+2026-09-29,Mie Goreng,6
+2026-09-30,Mie Goreng,20
+2026-08-02,Sate Taichan,15
+2026-08-03,Sate Taichan,11
+2026-08-04,Sate Taichan,6
+2026-08-05,Sate Taichan,7
+2026-08-06,Sate Taichan,6
+2026-08-07,Sate Taichan,10
+2026-08-08,Sate Taichan,14
+2026-08-09,Sate Taichan,19
+2026-08-10,Sate Taichan,7
+2026-08-11,Sate Taichan,10
+2026-08-12,Sate Taichan,10
+2026-08-13,Sate Taichan,8
+2026-08-14,Sate Taichan,11
+2026-08-15,Sate Taichan,24
+2026-08-16,Sate Taichan,13
+2026-08-17,Sate Taichan,11
+2026-08-18,Sate Taichan,10
+2026-08-19,Sate Taichan,12
+2026-08-20,Sate Taichan,9
+2026-08-21,Sate Taichan,11
+2026-08-22,Sate Taichan,12
+2026-08-23,Sate Taichan,15
+2026-08-24,Sate Taichan,6
+2026-08-25,Sate Taichan,6
+2026-08-26,Sate Taichan,10
+2026-08-27,Sate Taichan,14
+2026-08-28,Sate Taichan,14
+2026-08-29,Sate Taichan,13
+2026-08-30,Sate Taichan,14
+2026-08-31,Sate Taichan,9
+2026-09-01,Sate Taichan,5
+2026-09-02,Sate Taichan,17
+2026-09-03,Sate Taichan,20
+2026-09-04,Sate Taichan,12
+2026-09-05,Sate Taichan,13
+2026-09-06,Sate Taichan,22
+2026-09-07,Sate Taichan,13
+2026-09-08,Sate Taichan,14
+2026-09-09,Sate Taichan,6
+2026-09-10,Sate Taichan,8
+2026-09-11,Sate Taichan,19
+2026-09-12,Sate Taichan,24
+2026-09-13,Sate Taichan,16
+2026-09-14,Sate Taichan,9
+2026-09-15,Sate Taichan,10
+2026-09-16,Sate Taichan,11
+2026-09-17,Sate Taichan,7
+2026-09-18,Sate Taichan,2
+2026-09-19,Sate Taichan,12
+2026-09-20,Sate Taichan,17
+2026-09-21,Sate Taichan,10
+2026-09-22,Sate Taichan,15
+2026-09-23,Sate Taichan,8
+2026-09-24,Sate Taichan,8
+2026-09-25,Sate Taichan,7
+2026-09-26,Sate Taichan,20
+2026-09-27,Sate Taichan,18
+2026-09-28,Sate Taichan,4
+2026-09-29,Sate Taichan,9
+2026-09-30,Sate Taichan,10
+2026-08-02,Bakso Cup,11
+2026-08-03,Bakso Cup,6
+2026-08-04,Bakso Cup,11
+2026-08-05,Bakso Cup,4
+2026-08-06,Bakso Cup,6
+2026-08-07,Bakso Cup,4
+2026-08-08,Bakso Cup,15
+2026-08-09,Bakso Cup,9
+2026-08-10,Bakso Cup,7
+2026-08-11,Bakso Cup,14
+2026-08-12,Bakso Cup,13
+2026-08-13,Bakso Cup,7
+2026-08-14,Bakso Cup,8
+2026-08-15,Bakso Cup,13
+2026-08-16,Bakso Cup,21
+2026-08-17,Bakso Cup,8
+2026-08-18,Bakso Cup,4
+2026-08-19,Bakso Cup,10
+2026-08-20,Bakso Cup,8
+2026-08-21,Bakso Cup,12
+2026-08-22,Bakso Cup,13
+2026-08-23,Bakso Cup,8
+2026-08-24,Bakso Cup,8
+2026-08-25,Bakso Cup,9
+2026-08-26,Bakso Cup,13
+2026-08-27,Bakso Cup,8
+2026-08-28,Bakso Cup,6
+2026-08-29,Bakso Cup,10
+2026-08-30,Bakso Cup,10
+2026-08-31,Bakso Cup,8
+2026-09-01,Bakso Cup,9
+2026-09-02,Bakso Cup,11
+2026-09-03,Bakso Cup,5
+2026-09-04,Bakso Cup,11
+2026-09-05,Bakso Cup,9
+2026-09-06,Bakso Cup,11
+2026-09-07,Bakso Cup,9
+2026-09-08,Bakso Cup,7
+2026-09-09,Bakso Cup,7
+2026-09-10,Bakso Cup,8
+2026-09-11,Bakso Cup,7
+2026-09-12,Bakso Cup,13
+2026-09-13,Bakso Cup,11
+2026-09-14,Bakso Cup,12
+2026-09-15,Bakso Cup,13
+2026-09-16,Bakso Cup,13
+2026-09-17,Bakso Cup,6
+2026-09-18,Bakso Cup,3
+2026-09-19,Bakso Cup,8
+2026-09-20,Bakso Cup,12
+2026-09-21,Bakso Cup,6
+2026-09-22,Bakso Cup,10
+2026-09-23,Bakso Cup,7
+2026-09-24,Bakso Cup,4
+2026-09-25,Bakso Cup,7
+2026-09-26,Bakso Cup,10
+2026-09-27,Bakso Cup,9
+2026-09-28,Bakso Cup,6
+2026-09-29,Bakso Cup,10
+2026-09-30,Bakso Cup,6
+2026-09-26,Pisang Goreng,6
+2026-09-27,Pisang Goreng,3
+2026-09-28,Pisang Goreng,0
+2026-09-29,Pisang Goreng,3
+2026-09-30,Pisang Goreng,6
+2026-08-02,Donat Kentang,0
+2026-08-03,Donat Kentang,0
+2026-08-04,Donat Kentang,0
+2026-08-05,Donat Kentang,0
+2026-08-06,Donat Kentang,0
+2026-08-07,Donat Kentang,0
+2026-08-08,Donat Kentang,0
+2026-08-09,Donat Kentang,0
+2026-08-10,Donat Kentang,0
+2026-08-11,Donat Kentang,0
+2026-08-12,Donat Kentang,0
+2026-08-13,Donat Kentang,0
+2026-08-14,Donat Kentang,0
+2026-08-15,Donat Kentang,0
+2026-08-16,Donat Kentang,0
+2026-08-17,Donat Kentang,0
+2026-08-18,Donat Kentang,0
+2026-08-19,Donat Kentang,0
+2026-08-20,Donat Kentang,0
+2026-08-21,Donat Kentang,0
+2026-08-22,Donat Kentang,0
+2026-08-23,Donat Kentang,0
+2026-08-24,Donat Kentang,0
+2026-08-25,Donat Kentang,0
+2026-08-26,Donat Kentang,0
+2026-08-27,Donat Kentang,0
+2026-08-28,Donat Kentang,0
+2026-08-29,Donat Kentang,0
+2026-08-30,Donat Kentang,0
+2026-08-31,Donat Kentang,0
+2026-09-01,Donat Kentang,0
+2026-09-02,Donat Kentang,0
+2026-09-03,Donat Kentang,0
+2026-09-04,Donat Kentang,0
+2026-09-05,Donat Kentang,0
+2026-09-06,Donat Kentang,0
+2026-09-07,Donat Kentang,0
+2026-09-08,Donat Kentang,0
+2026-09-09,Donat Kentang,0
+2026-09-10,Donat Kentang,0
+2026-09-11,Donat Kentang,0
+2026-09-12,Donat Kentang,0
+2026-09-13,Donat Kentang,0
+2026-09-14,Donat Kentang,0
+2026-09-15,Donat Kentang,0
+2026-09-16,Donat Kentang,0
+2026-09-17,Donat Kentang,0
+2026-09-18,Donat Kentang,0
+2026-09-19,Donat Kentang,0
+2026-09-20,Donat Kentang,0
+2026-09-21,Donat Kentang,0
+2026-09-22,Donat Kentang,0
+2026-09-23,Donat Kentang,0
+2026-09-24,Donat Kentang,0
+2026-09-25,Donat Kentang,0
+2026-09-26,Donat Kentang,0
+2026-09-27,Donat Kentang,0
+2026-09-28,Donat Kentang,0
+2026-09-29,Donat Kentang,0
+2026-09-30,Donat Kentang,0
