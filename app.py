@@ -220,7 +220,7 @@ def _render_results_page() -> None:
                     hide_index=True,
                 )
             with cols[1]:
-                st.markdown("**Tingkat Kepercayaan Prediksi Model**")
+                st.markdown("**Tabel Tingkat Kepercayaan Prediksi Model**")
                 st.dataframe(
                     confidence_view[["product", "confidence"]].rename(
                         columns={
