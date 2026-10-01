@@ -109,7 +109,7 @@ def _render_upload_page() -> None:
         "Unggah CSV Penjualan", type=["csv"], disabled=use_demo
     )
     uploaded_stock = st.file_uploader(
-        "Unggah CSV Stok", type=["csv"], disabled=use_demo
+        "Unggah CSV Stok", type=["csv"], disabled=use_demo 
     )
 
     if uploaded_sales is not None:
@@ -198,42 +198,39 @@ def _render_results_page() -> None:
                 lambda x: _risk_badge(x)
             )
 
+            # Aggregate forecast to one row per product.
+            product_forecast_summary = (
+                forecast_df.groupby("product", as_index=False)
+                .agg(total_prediksi=("forecast_qty", "sum"))
+                .sort_values("product")
+                .reset_index(drop=True)
+            )
+
             cols = st.columns([2, 1])
             with cols[0]:
                 st.markdown("**Tabel Prediksi**")
                 st.dataframe(
-                    forecast_df[["product", "date", "forecast_qty"]].rename(
+                    product_forecast_summary.rename(
                         columns={
                             "product": "Produk",
-                            "date": "Tanggal",
-                            "forecast_qty": "Prediksi Terjual",
+                            "total_prediksi": "Total Prediksi Terjual",
                         }
                     ),
                     width="stretch",
                     hide_index=True,
                 )
             with cols[1]:
-                st.markdown("**Tingkat Kepercayaan**")
+                st.markdown("**Tingkat Kepercayaan Prediksi Model**")
                 st.dataframe(
-                    confidence_view[["product", "confidence", "badge"]].rename(
+                    confidence_view[["product", "confidence"]].rename(
                         columns={
                             "product": "Produk",
-                            "confidence": "Skor",
-                            "badge": "Tingkat",
+                            "confidence": "Skor Prediksi (0 - 1)",
                         }
                     ),
                     width="stretch",
                     hide_index=True,
                 )
-
-            st.divider()
-            st.markdown("**Grafik per Produk**")
-            products = sorted(forecast_df["product"].unique())
-            selected_product = st.selectbox("Pilih produk", products, key="selected_product")
-            product_chart_data = forecast_df[forecast_df["product"] == selected_product][
-                ["date", "forecast_qty"]
-            ].rename(columns={"date": "Tanggal", "forecast_qty": "Prediksi"})
-            st.line_chart(product_chart_data.set_index("Tanggal"))
 
     # Dead-stock tab
     with tab_deadstock:
@@ -262,7 +259,6 @@ def _render_results_page() -> None:
                     "days_to_sell": "Estimasi Hari Habis",
                     "suggested_action": "Saran Tindakan",
                     "potential_units_wasted": "Estimasi Sia-sia (unit)",
-                    "forecast_confidence": "Kepercayaan Prediksi",
                 }
             )
 
@@ -282,6 +278,21 @@ def _render_results_page() -> None:
                 ],
                 width="stretch",
                 hide_index=True,
+            )
+
+            st.divider()
+            st.markdown("**Grafik Tingkat Risiko per Produk**")
+            chart_df = (
+                display_df[["Produk", "risk"]]
+                .drop_duplicates()
+                .sort_values("Produk")
+                .reset_index(drop=True)
+            )
+            risk_score_map = {"Low": 1, "Medium": 2, "High": 3}
+            chart_df["Skor Risiko"] = chart_df["risk"].map(risk_score_map)
+            st.bar_chart(
+                chart_df.set_index("Produk")[["Skor Risiko"]],
+                color="#C36A45",
             )
 
             csv = warnings_df.to_csv(index=False).encode("utf-8")
