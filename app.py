@@ -43,6 +43,7 @@ def load_demo_stock() -> pd.DataFrame:
 def _init_session_state() -> None:
     """Ensure session state keys exist."""
     defaults = {
+        "page": "upload",
         "forecast_df": None,
         "warnings_df": None,
         "sales_warnings": [],
@@ -81,69 +82,50 @@ def run_pipeline(sales_df: pd.DataFrame, stock_df: pd.DataFrame, horizon: int):
     return forecast, warnings, sales_warnings
 
 
-def main() -> None:
-    st.set_page_config(page_title="RAMALOKA", page_icon="📊", layout="wide")
-
-    _init_session_state()
-
+def _render_upload_page() -> None:
+    """Render the upload page: first screen users see."""
     st.title("RAMALOKA")
-    st.caption("Prakiraan permintaan & peringatan stok mati untuk bisnis F&B Indonesia")
+    st.caption("Prediksi permintaan & peringatan stok mati untuk bisnis F&B Indonesia")
 
-    # Sidebar
-    with st.sidebar:
-        st.header("Input Data")
-        use_demo = st.checkbox("Gunakan data contoh", value=False)
-
-        sales_file = None
-        stock_file = None
-        if use_demo:
-            if SALES_SAMPLE.exists() and STOCK_SAMPLE.exists():
-                sales_file = load_demo_sales()
-                stock_file = load_demo_stock()
-                st.success("Data contoh dimuat.")
-            else:
-                st.error("File contoh belum tersedia di folder demo/.")
-
-        uploaded_sales = st.file_uploader(
-            "Unggah CSV Penjualan", type=["csv"], disabled=use_demo
-        )
-        uploaded_stock = st.file_uploader(
-            "Unggah CSV Stok", type=["csv"], disabled=use_demo
-        )
-
-        if uploaded_sales is not None:
-            sales_file = pd.read_csv(uploaded_sales)
-        if uploaded_stock is not None:
-            stock_file = pd.read_csv(uploaded_stock)
-
-        horizon = st.slider("Jumlah hari prakiraan", min_value=3, max_value=30, value=7)
-
-        run_clicked = st.button("Hitung Prakiraan", type="primary", width="stretch")
-
-    tab_forecast, tab_deadstock, tab_notes = st.tabs(
-        ["Prakiraan Permintaan", "Peringatan Stok Mati", "Catatan & Batasan"]
+    st.markdown("### Langkah 1: Unggah Data")
+    st.info(
+        "Aplikasi membutuhkan dua file CSV: data penjualan harian dan data stok saat ini. "
+        "Anda juga boleh menggunakan data contoh untuk mencoba."
     )
 
-    # Notes tab is static.
-    with tab_notes:
-        st.subheader("Catatan & Batasan")
-        st.info(
-            """
-            RAMALOKA adalah alat bantu rekomendasi, bukan keputusan akhir.
+    use_demo = st.checkbox("Gunakan data contoh", value=False)
 
-            - Akurasi prakiraan sangat bergantung pada kualitas dan kelengkapan data penjualan Anda.
-            - Disarankan memiliki minimal beberapa minggu riwayat penjualan untuk hasil yang lebih baik.
-            - Metode yang digunakan adalah rata-rata bergerak sederhana, sehingga belum memperhitungkan
-              hari libur, promo mendadak, atau perubahan musim.
-            - Selalu lakukan pengecekan manual sebelum membuat keputusan pembelian atau pembuangan stok.
-            """
-        )
+    sales_file = None
+    stock_file = None
+    if use_demo:
+        if SALES_SAMPLE.exists() and STOCK_SAMPLE.exists():
+            sales_file = load_demo_sales()
+            stock_file = load_demo_stock()
+            st.success("Data contoh dimuat.")
+        else:
+            st.error("File contoh belum tersedia di folder demo/.")
 
-    # Run pipeline when button is clicked and inputs are valid.
-    if run_clicked:
+    uploaded_sales = st.file_uploader(
+        "Unggah CSV Penjualan", type=["csv"], disabled=use_demo
+    )
+    uploaded_stock = st.file_uploader(
+        "Unggah CSV Stok", type=["csv"], disabled=use_demo
+    )
+
+    if uploaded_sales is not None:
+        sales_file = pd.read_csv(uploaded_sales)
+    if uploaded_stock is not None:
+        stock_file = pd.read_csv(uploaded_stock)
+
+    horizon = st.slider("Jumlah hari prediksi", min_value=3, max_value=30, value=7)
+
+    if st.button("Hitung Prediksi", type="primary", width="stretch"):
         if sales_file is None or stock_file is None:
             st.error("Mohon unggah file penjualan dan stok, atau centang \"Gunakan data contoh\".")
             st.session_state["pipeline_error"] = "missing_input"
+            st.session_state["forecast_df"] = None
+            st.session_state["warnings_df"] = None
+            st.session_state["last_input_signature"] = None
         else:
             st.session_state["pipeline_error"] = None
             current_sig = _get_input_signature(sales_file, stock_file, horizon)
@@ -155,23 +137,24 @@ def main() -> None:
                 st.session_state["warnings_df"] = warnings_df
                 st.session_state["sales_warnings"] = sales_warnings or []
                 st.session_state["last_input_signature"] = current_sig
+            st.session_state["page"] = "results"
+            st.rerun()
 
-    # Render from session state so UI interactions (selectbox, tabs) do not clear results.
+
+def _render_results_page() -> None:
+    """Render the results page with forecast and dead-stock tables."""
+    st.title("RAMALOKA")
+    st.caption("Hasil prediksi permintaan & peringatan stok mati")
+
+    if st.button("← Kembali ke Unggah Data", type="secondary"):
+        st.session_state["page"] = "upload"
+        st.rerun()
+
     forecast_df = st.session_state["forecast_df"]
     warnings_df = st.session_state["warnings_df"]
 
-    if st.session_state["pipeline_error"] == "missing_input":
-        with tab_forecast:
-            st.info("Unggah data penjualan dan stok, lalu klik \"Hitung Prakiraan\".")
-        with tab_deadstock:
-            st.info("Hasil peringatan stok mati akan muncul setelah perhitungan.")
-        return
-
-    if forecast_df is None or warnings_df is None:
-        with tab_forecast:
-            st.info("Unggah data penjualan dan stok, lalu klik \"Hitung Prakiraan\".")
-        with tab_deadstock:
-            st.info("Hasil peringatan stok mati akan muncul setelah perhitungan.")
+    if st.session_state["pipeline_error"] == "missing_input" or forecast_df is None or warnings_df is None:
+        st.warning("Belum ada hasil. Silakan kembali dan unggah data terlebih dahulu.")
         return
 
     # Display any validation warnings once.
@@ -179,12 +162,31 @@ def main() -> None:
         for warning in st.session_state["sales_warnings"]:
             st.warning(warning)
 
+    tab_forecast, tab_deadstock, tab_notes = st.tabs(
+        ["Prediksi Permintaan", "Peringatan Stok Mati", "Catatan & Batasan"]
+    )
+
+    # Notes tab is static.
+    with tab_notes:
+        st.subheader("Catatan & Batasan")
+        st.info(
+            """
+            RAMALOKA adalah alat bantu rekomendasi, bukan keputusan akhir.
+
+            - Akurasi prediksi sangat bergantung pada kualitas dan kelengkapan data penjualan Anda.
+            - Disarankan memiliki minimal beberapa minggu riwayat penjualan untuk hasil yang lebih baik.
+            - Metode yang digunakan adalah rata-rata bergerak sederhana, sehingga belum memperhitungkan
+              hari libur, promo mendadak, atau perubahan musim.
+            - Selalu lakukan pengecekan manual sebelum membuat keputusan pembelian atau pembuangan stok.
+            """
+        )
+
     # Forecast tab
     with tab_forecast:
-        st.subheader("Prakiraan Permintaan")
+        st.subheader("Prediksi Permintaan")
 
         if forecast_df.empty:
-            st.warning("Tidak ada produk untuk diprakirakan.")
+            st.warning("Tidak ada produk untuk diprediksi.")
         else:
             confidence_view = (
                 forecast_df[["product", "confidence", "label"]]
@@ -198,13 +200,13 @@ def main() -> None:
 
             cols = st.columns([2, 1])
             with cols[0]:
-                st.markdown("**Tabel Prakiraan**")
+                st.markdown("**Tabel Prediksi**")
                 st.dataframe(
                     forecast_df[["product", "date", "forecast_qty"]].rename(
                         columns={
                             "product": "Produk",
                             "date": "Tanggal",
-                            "forecast_qty": "Prakiraan Terjual",
+                            "forecast_qty": "Prediksi Terjual",
                         }
                     ),
                     width="stretch",
@@ -230,7 +232,7 @@ def main() -> None:
             selected_product = st.selectbox("Pilih produk", products, key="selected_product")
             product_chart_data = forecast_df[forecast_df["product"] == selected_product][
                 ["date", "forecast_qty"]
-            ].rename(columns={"date": "Tanggal", "forecast_qty": "Prakiraan"})
+            ].rename(columns={"date": "Tanggal", "forecast_qty": "Prediksi"})
             st.line_chart(product_chart_data.set_index("Tanggal"))
 
     # Dead-stock tab
@@ -260,7 +262,7 @@ def main() -> None:
                     "days_to_sell": "Estimasi Hari Habis",
                     "suggested_action": "Saran Tindakan",
                     "potential_units_wasted": "Estimasi Sia-sia (unit)",
-                    "forecast_confidence": "Kepercayaan Prakiraan",
+                    "forecast_confidence": "Kepercayaan Prediksi",
                 }
             )
 
@@ -289,6 +291,17 @@ def main() -> None:
                 file_name="ramaloka_warning.csv",
                 mime="text/csv",
             )
+
+
+def main() -> None:
+    st.set_page_config(page_title="RAMALOKA", page_icon="📊", layout="wide")
+
+    _init_session_state()
+
+    if st.session_state["page"] == "upload":
+        _render_upload_page()
+    else:
+        _render_results_page()
 
 
 if __name__ == "__main__":

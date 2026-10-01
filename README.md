@@ -3,7 +3,7 @@ An AI-powered, CSV-based stock forecasting and deadstock warning system for smal
 
 ## Tentang Proyek
 
-RAMALOKA adalah aplikasi web sederhana berbasis Streamlit yang membantu pemilik bisnis F&B (kafe, restoran, usaha kuliner kecil) di Indonesia membuat prakiraan permintaan jangka pendek dan mendeteksi stok yang berisiko mati atau kedaluwarsa. Aplikasi ini dibuat sebagai "walking skeleton" untuk keperluan bootcamp universitas.
+RAMALOKA adalah aplikasi web sederhana berbasis Streamlit yang membantu pemilik bisnis F&B (kafe, restoran, usaha kuliner kecil) di Indonesia membuat prediksi permintaan jangka pendek dan mendeteksi stok yang berisiko mati atau kedaluwarsa. Aplikasi ini dibuat sebagai "walking skeleton" untuk keperluan bootcamp universitas.
 
 ## Cara Menjalankan
 
@@ -41,10 +41,10 @@ RAMALOKA adalah aplikasi web sederhana berbasis Streamlit yang membantu pemilik 
 
 ## Cara Kerja
 
-### Prakiraan Permintaan
+### Prediksi Permintaan
 
 - Data penjualan diagregasi menjadi total harian per produk. Hari tanpa transaksi diisi dengan nol.
-- Prakiraan untuk beberapa hari ke depan dihitung dengan **rata-rata bergerak** dari beberapa hari terakhir.
+- Prediksi untuk beberapa hari ke depan dihitung dengan **rata-rata bergerak** dari beberapa hari terakhir.
 - Setiap produk mendapat **skor kepercayaan** 0 sampai 1 berdasarkan:
   - Lama riwayat penjualan: semakin panjang data, semakin tinggi kepercayaannya.
   - Variabilitas penjualan harian (koefisien variasi): semakin berfluktuasi, semakin rendah kepercayaannya.
@@ -52,13 +52,13 @@ RAMALOKA adalah aplikasi web sederhana berbasis Streamlit yang membantu pemilik 
   - High: skor >= 0,7
   - Medium: skor 0,4 sampai 0,7
   - Low: skor < 0,4
-- Produk dengan kurang dari 3 hari data tetap diprakirakan, tetapi kepercayaannya sangat rendah.
+- Produk dengan kurang dari 3 hari data tetap diprediksi, tetapi kepercayaannya sangat rendah.
 
 ### Peringatan Stok Mati
 
-- Aplikasi membandingkan stok saat ini dan tanggal kedaluwarsa dengan rata-rata permintaan harian dari hasil prakiraan.
+- Aplikasi membandingkan stok saat ini dan tanggal kedaluwarsa dengan rata-rata permintaan harian dari hasil prediksi.
 - Beberapa metrik yang dihitung:
-  - `avg_daily_demand`: rata-rata prakiraan permintaan harian.
+  - `avg_daily_demand`: rata-rata prediksi permintaan harian.
   - `days_to_sell`: estimasi hari stok habis (`stok / rata-rata harian`).
   - `days_until_expiry`: sisa hari hingga kedaluwarsa.
 - Tingkat risiko:
@@ -85,7 +85,7 @@ ramaloka/
 ├── README.md              # Dokumentasi proyek
 ├── core/
 │   ├── __init__.py
-│   ├── forecast.py        # Logika prakiraan permintaan
+│   ├── forecast.py        # Logika prediksi permintaan
 │   └── deadstock.py       # Logika peringatan stok mati
 ├── demo/
 │   ├── generate_demo_data.py  # Skrip untuk membuat data contoh
