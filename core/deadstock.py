@@ -156,7 +156,7 @@ def assess_dead_stock(
             "expiry_date": expiry_date.date(),
             "days_until_expiry": days_until_expiry,
             "avg_daily_demand": round(avg_demand, 2),
-            "days_to_sell": round(days_to_sell, 2) if np.isfinite(days_to_sell) else "∞",
+            "days_to_sell": round(days_to_sell, 2) if np.isfinite(days_to_sell) else -1.0,
             "risk": risk,
             "suggested_action": action.strip(),
             "potential_units_wasted": round(potential_wasted, 2),

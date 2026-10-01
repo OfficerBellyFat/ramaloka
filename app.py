@@ -93,7 +93,7 @@ def main() -> None:
 
         horizon = st.slider("Jumlah hari prakiraan", min_value=3, max_value=30, value=7)
 
-        run_clicked = st.button("Hitung Prakiraan", type="primary", use_container_width=True)
+        run_clicked = st.button("Hitung Prakiraan", type="primary", width="stretch")
 
     tab_forecast, tab_deadstock, tab_notes = st.tabs(
         ["Prakiraan Permintaan", "Peringatan Stok Mati", "Catatan & Batasan"]
@@ -165,7 +165,7 @@ def main() -> None:
                             "forecast_qty": "Prakiraan Terjual",
                         }
                     ),
-                    use_container_width=True,
+                    width="stretch",
                     hide_index=True,
                 )
             with cols[1]:
@@ -178,7 +178,7 @@ def main() -> None:
                             "badge": "Tingkat",
                         }
                     ),
-                    use_container_width=True,
+                    width="stretch",
                     hide_index=True,
                 )
 
@@ -236,7 +236,7 @@ def main() -> None:
                         "Saran Tindakan",
                     ]
                 ],
-                use_container_width=True,
+                width="stretch",
                 hide_index=True,
             )
 
