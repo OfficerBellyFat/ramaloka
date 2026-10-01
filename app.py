@@ -84,6 +84,7 @@ def run_pipeline(sales_df: pd.DataFrame, stock_df: pd.DataFrame, horizon: int):
 
 def _render_upload_page() -> None:
     """Render the upload page: first screen users see."""
+    st.image("resources/logo.png", width=100)
     st.title("RAMALOKA")
     st.caption("Prediksi permintaan & peringatan stok mati untuk bisnis F&B Indonesia")
 
@@ -305,7 +306,7 @@ def _render_results_page() -> None:
 
 
 def main() -> None:
-    st.set_page_config(page_title="RAMALOKA", page_icon="📊", layout="wide")
+    st.set_page_config(page_title="RAMALOKA", page_icon="resources/logo.png", layout="wide")
 
     _init_session_state()
 
