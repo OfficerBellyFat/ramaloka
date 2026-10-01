@@ -292,7 +292,7 @@ def _render_results_page() -> None:
             chart_df["Skor Risiko"] = chart_df["risk"].map(risk_score_map)
             st.bar_chart(
                 chart_df.set_index("Produk")[["Skor Risiko"]],
-                color="#C36A45",
+                color="#D4A065",
             )
 
             csv = warnings_df.to_csv(index=False).encode("utf-8")
