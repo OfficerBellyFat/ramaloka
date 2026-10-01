@@ -144,6 +144,7 @@ def _render_upload_page() -> None:
 
 def _render_results_page() -> None:
     """Render the results page with forecast and dead-stock tables."""
+    st.image("resources/logo.png", width=55)
     st.title("RAMALOKA")
     st.caption("Hasil prediksi permintaan & peringatan stok mati")
 
