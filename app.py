@@ -40,6 +40,29 @@ def load_demo_stock() -> pd.DataFrame:
     return pd.read_csv(STOCK_SAMPLE)
 
 
+def _init_session_state() -> None:
+    """Ensure session state keys exist."""
+    defaults = {
+        "forecast_df": None,
+        "warnings_df": None,
+        "sales_warnings": [],
+        "pipeline_error": None,
+        "last_input_signature": None,
+    }
+    for key, value in defaults.items():
+        if key not in st.session_state:
+            st.session_state[key] = value
+
+
+def _get_input_signature(sales_file, stock_file, horizon: int):
+    """Create a hashable signature to detect when input truly changes."""
+    if sales_file is None or stock_file is None:
+        return None
+    sales_sig = hash(bytes(pd.util.hash_pandas_object(sales_file).values))
+    stock_sig = hash(bytes(pd.util.hash_pandas_object(stock_file).values))
+    return (sales_sig, stock_sig, horizon)
+
+
 def run_pipeline(sales_df: pd.DataFrame, stock_df: pd.DataFrame, horizon: int):
     """Run forecast and dead-stock assessment. Return (forecast, warnings, error)."""
     try:
@@ -60,6 +83,8 @@ def run_pipeline(sales_df: pd.DataFrame, stock_df: pd.DataFrame, horizon: int):
 
 def main() -> None:
     st.set_page_config(page_title="RAMALOKA", page_icon="📊", layout="wide")
+
+    _init_session_state()
 
     st.title("RAMALOKA")
     st.caption("Prakiraan permintaan & peringatan stok mati untuk bisnis F&B Indonesia")
@@ -114,28 +139,45 @@ def main() -> None:
             """
         )
 
-    if not run_clicked:
+    # Run pipeline when button is clicked and inputs are valid.
+    if run_clicked:
+        if sales_file is None or stock_file is None:
+            st.error("Mohon unggah file penjualan dan stok, atau centang \"Gunakan data contoh\".")
+            st.session_state["pipeline_error"] = "missing_input"
+        else:
+            st.session_state["pipeline_error"] = None
+            current_sig = _get_input_signature(sales_file, stock_file, horizon)
+            if current_sig != st.session_state["last_input_signature"]:
+                forecast_df, warnings_df, sales_warnings = run_pipeline(
+                    sales_file, stock_file, horizon
+                )
+                st.session_state["forecast_df"] = forecast_df
+                st.session_state["warnings_df"] = warnings_df
+                st.session_state["sales_warnings"] = sales_warnings or []
+                st.session_state["last_input_signature"] = current_sig
+
+    # Render from session state so UI interactions (selectbox, tabs) do not clear results.
+    forecast_df = st.session_state["forecast_df"]
+    warnings_df = st.session_state["warnings_df"]
+
+    if st.session_state["pipeline_error"] == "missing_input":
         with tab_forecast:
             st.info("Unggah data penjualan dan stok, lalu klik \"Hitung Prakiraan\".")
         with tab_deadstock:
             st.info("Hasil peringatan stok mati akan muncul setelah perhitungan.")
         return
 
-    if sales_file is None or stock_file is None:
-        st.error("Mohon unggah file penjualan dan stok, atau centang \"Gunakan data contoh\".")
+    if forecast_df is None or warnings_df is None:
+        with tab_forecast:
+            st.info("Unggah data penjualan dan stok, lalu klik \"Hitung Prakiraan\".")
+        with tab_deadstock:
+            st.info("Hasil peringatan stok mati akan muncul setelah perhitungan.")
         return
 
-    forecast_df, warnings_df_or_str, error = run_pipeline(sales_file, stock_file, horizon)
-
-    if isinstance(warnings_df_or_str, list) and warnings_df_or_str:
-        for warning in warnings_df_or_str:
+    # Display any validation warnings once.
+    if st.session_state["sales_warnings"]:
+        for warning in st.session_state["sales_warnings"]:
             st.warning(warning)
-
-    if error:
-        st.error(error)
-        return
-
-    warnings_df = warnings_df_or_str  # type: ignore[assignment]
 
     # Forecast tab
     with tab_forecast:
@@ -185,7 +227,7 @@ def main() -> None:
             st.divider()
             st.markdown("**Grafik per Produk**")
             products = sorted(forecast_df["product"].unique())
-            selected_product = st.selectbox("Pilih produk", products)
+            selected_product = st.selectbox("Pilih produk", products, key="selected_product")
             product_chart_data = forecast_df[forecast_df["product"] == selected_product][
                 ["date", "forecast_qty"]
             ].rename(columns={"date": "Tanggal", "forecast_qty": "Prakiraan"})
