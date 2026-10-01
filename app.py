@@ -84,7 +84,7 @@ def run_pipeline(sales_df: pd.DataFrame, stock_df: pd.DataFrame, horizon: int):
 
 def _render_upload_page() -> None:
     """Render the upload page: first screen users see."""
-    st.image("resources/logo.png", width=100)
+    st.image("resources/logo.png", width=75)
     st.title("RAMALOKA")
     st.caption("Prediksi permintaan & peringatan stok mati untuk bisnis F&B Indonesia")
 
