@@ -1,5 +1,5 @@
 # RAMALOKA
-An AI-powered, CSV-based stock forecasting and deadstock warning system for small businesses in the F&B.
+Aplikasi sistem prediksi stok dan peringatan deadstock berbasis AI untuk bisnis kecil di bidang F&B.
 
 ## Tentang Proyek
 
